@@ -1,0 +1,7 @@
+steps:
+  - dataTableName: aaa
+    sql: select * from t_name
+
+env:
+  aaa: ${aaa}
+  ccc: ${vvvv}
