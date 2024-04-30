@@ -31,7 +31,7 @@ public class ConfigurationParse {
         return map;
     }
 
-    public static Configuration parse(String[] args) {
+    public static Config parse(String[] args) {
         Map<String, String> argsMap = processArgs(args);
         String configFilePath = argsMap.get("config");
         String resultStr = null;
@@ -42,6 +42,8 @@ public class ConfigurationParse {
             e.printStackTrace();
         }
 
-        return new Yaml().loadAs(resultStr, Configuration.class);
+        Config config = new Yaml().loadAs(resultStr, Config.class);
+        log.info("MuZiMin Flin Log | 解析配置文件之后的配置: {}", config);
+        return config;
     }
 }

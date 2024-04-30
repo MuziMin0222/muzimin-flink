@@ -1,15 +1,13 @@
 package com.muzimin.configuration;
 
+import com.muzimin.configuration.env.Env;
 import com.muzimin.configuration.step.Step;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * @author: 李煌民
@@ -19,7 +17,7 @@ import java.util.Map;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class Configuration {
+public class Config {
     private List<Step> steps;
-    private Map<String, Object> env;
+    private Env env;
 }

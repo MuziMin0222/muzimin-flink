@@ -3,5 +3,7 @@ steps:
     sql: select * from t_name
 
 env:
-  aaa: ${aaa}
-  ccc: ${vvvv}
+  jobMode: batch
+  params:
+    aaa: ${aaa}
+    ccc: ${vvvv}
